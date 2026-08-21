@@ -16,12 +16,14 @@ const BeforeAfterSlider = ({ beforeSrc, afterSrc, beforeLabel = 'Before', afterL
 
   const handleMove = (e) => {
     if (!dragging.current) return;
+    if (e.touches) e.preventDefault();
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     updatePosition(clientX);
   };
 
-  const startDrag = () => {
+  const startDrag = (e) => {
     dragging.current = true;
+    if (e.touches) e.preventDefault();
   };
   const endDrag = () => {
     dragging.current = false;
@@ -35,7 +37,7 @@ const BeforeAfterSlider = ({ beforeSrc, afterSrc, beforeLabel = 'Before', afterL
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[4/3] w-full select-none overflow-hidden rounded-xl gold-border"
+      className="relative aspect-[4/3] w-full select-none overflow-hidden rounded-xl gold-border touch-pan-y"
       onMouseMove={handleMove}
       onMouseUp={endDrag}
       onMouseLeave={endDrag}
@@ -61,7 +63,7 @@ const BeforeAfterSlider = ({ beforeSrc, afterSrc, beforeLabel = 'Before', afterL
       </span>
 
       <div
-        className="absolute top-0 h-full w-0.5 cursor-ew-resize bg-nova-gold"
+        className="absolute top-0 h-full w-0.5 touch-none cursor-ew-resize bg-nova-gold"
         style={{ left: `${position}%` }}
         onMouseDown={startDrag}
         onTouchStart={startDrag}
