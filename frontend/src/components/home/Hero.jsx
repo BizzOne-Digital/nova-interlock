@@ -24,17 +24,16 @@ const Hero = () => (
         transition={{ duration: 0.6 }}
         className="max-w-2xl"
       >
-        <p className="label-uppercase mb-4">Ottawa's Interlock &amp; Landscaping Experts</p>
+        <p className="label-uppercase mb-4">Limited-Time Driveway Clearance Event</p>
         <h1 className="font-heading text-4xl font-bold leading-tight text-nova-text sm:text-5xl lg:text-6xl">
-          Transform Your Outdoors
+          Driveway Clearance Sale
           <br />
-          with Expert Interlock &amp;{' '}
-          <span className="bg-gold-gradient bg-clip-text text-transparent">Hardscaping</span>
+          <span className="bg-gold-gradient bg-clip-text text-transparent">Driveways &amp; Driveway Extensions</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-nova-text-secondary sm:text-lg">
-          We build beautiful, durable outdoor spaces with attention to detail, proper preparation, and
-          workmanship designed to last. From driveways and patios to complete outdoor transformations, we
-          bring your vision to life.
+          Clearance pricing on interlock driveways and driveway extensions this season — proper
+          preparation, premium materials, and workmanship built to last. Call now while spots are
+          available.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -42,8 +41,8 @@ const Hero = () => (
             <Phone size={18} />
             {PHONE_DISPLAY}
           </a>
-          <Link to="/services" className="btn-outline focus-ring">
-            Explore Our Services
+          <Link to="/contact" className="btn-outline focus-ring">
+            Get Your Driveway Quote
             <ArrowRight size={16} />
           </Link>
         </div>

@@ -17,8 +17,8 @@ import FinalCTA from '../components/home/FinalCTA';
 const Home = () => (
   <>
     <SEO
-      title="Nova Hardscapes | Interlock & Landscaping Ottawa"
-      description="Nova Hardscapes provides professional interlock driveways, patios, walkways, retaining walls and landscaping services throughout Ottawa."
+      title="Driveway Clearance Sale | Nova Hardscapes Ottawa"
+      description="Clearance pricing on interlock driveways and driveway extensions in Ottawa. Nova Hardscapes also offers patios, walkways, retaining walls and landscaping."
     />
     <Hero />
     <TrustStrip />
